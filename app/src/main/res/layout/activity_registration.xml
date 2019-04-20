@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.RegistrationActivity"
+    android:id="@+id/registration_root"
+    >
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_searchme"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:id="@+id/logo_image"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name_layout"
+        android:layout_below="@id/logo_image"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        app:counterEnabled="true"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:counterTextAppearance="@style/TextAppearance.Design.Counter"
+        app:counterMaxLength="30"
+        >
+
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username"
+            android:inputType="text"
+            android:id="@+id/UserName"
+            android:padding="8dp"
+            android:maxLength="30"
+
+            />
+
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_email_layout"
+        android:layout_below="@id/user_name_layout"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        >
+
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:id="@+id/UserEmail"
+            android:padding="8dp"
+
+
+            />
+
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+             <android.support.design.button.MaterialButton
+                 android:layout_width="match_parent"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginEnd="16dp"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/user_email_layout"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="32dp"
+
+                 android:text="Sign Up"
+                 style="@style/Widget.AppCompat.Button.Colored"
+                 android:padding="8dp"
+                 android:textSize="20sp"
+                 android:background="@color/colorPrimaryDark"
+                 android:textAllCaps="false"
+                 android:layout_marginLeft="16dp"
+                 android:onClick="RegistrationProcess"
+                 android:fontFamily="sans-serif-condensed"
+                 android:id="@+id/SignUp"
+                 />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SignUp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="AlreadyHasAccount"
+        android:text="Already Registered?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+         android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:indeterminateDrawable="@drawable/progress" >
+    </ProgressBar>
+</RelativeLayout>
